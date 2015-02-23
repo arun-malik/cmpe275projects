@@ -1,0 +1,429 @@
+Testing to arun - no switch
+===========================================================
+C:\xampp\apache\bin>ab -n 5000 -c 200 http://192.168.42.3:3000/category
+This is ApacheBench, Version 2.3 <$Revision: 1604373 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.42.3 (be patient)
+Completed 500 requests
+Completed 1000 requests
+Completed 1500 requests
+Completed 2000 requests
+Completed 2500 requests
+Completed 3000 requests
+Completed 3500 requests
+Completed 4000 requests
+Completed 4500 requests
+Completed 5000 requests
+Finished 5000 requests
+
+
+Server Software:
+Server Hostname:        192.168.42.3
+Server Port:            3000
+
+Document Path:          /category
+Document Length:        109 bytes
+
+Concurrency Level:      200
+Time taken for tests:   251.452 seconds
+Complete requests:      5000
+Failed requests:        0
+Total transferred:      1405000 bytes
+HTML transferred:       545000 bytes
+Requests per second:    19.88 [#/sec] (mean)
+Time per request:       10058.069 [ms] (mean)
+Time per request:       50.290 [ms] (mean, across all concurrent requests)
+Transfer rate:          5.46 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   50 384.8      0    3032
+Processing:    16 9863 1743.0   9104   12150
+Waiting:        0 5734 2626.1   6049    9131
+Total:         16 9913 1756.8   9105   12150
+
+Percentage of the requests served within a certain time (ms)
+  50%   9105
+  66%   9128
+  75%  12088
+  80%  12095
+  90%  12108
+  95%  12117
+  98%  12137
+  99%  12141
+ 100%  12150 (longest request)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Testing atlantis to atlantis
+===========================================================
+ 
+ sai@atlantis:~/node$ ab -n 50000 -c 200 http://atlantis.srkarra.com:3000/category
+This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking atlantis.srkarra.com (be patient)
+Completed 5000 requests
+Completed 10000 requests
+Completed 15000 requests
+Completed 20000 requests
+Completed 25000 requests
+Completed 30000 requests
+Completed 35000 requests
+Completed 40000 requests
+Completed 45000 requests
+Completed 50000 requests
+Finished 50000 requests
+
+
+Server Software:
+Server Hostname:        atlantis.srkarra.com
+Server Port:            3000
+
+Document Path:          /category
+Document Length:        685 bytes
+
+Concurrency Level:      200
+Time taken for tests:   57.553 seconds
+Complete requests:      50000
+Failed requests:        0
+Total transferred:      42800000 bytes
+HTML transferred:       34250000 bytes
+Requests per second:    868.77 [#/sec] (mean)
+Time per request:       230.210 [ms] (mean)
+Time per request:       1.151 [ms] (mean, across all concurrent requests)
+Transfer rate:          726.24 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       6
+Processing:    96  230  33.2    221     467
+Waiting:       96  230  33.2    221     467
+Total:         97  230  33.2    221     469
+
+Percentage of the requests served within a certain time (ms)
+  50%    221
+  66%    228
+  75%    233
+  80%    239
+  90%    273
+  95%    307
+  98%    340
+  99%    356
+ 100%    469 (longest request)
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ testing srkarra to ryan, no switch
+ C:\xampp\apache\bin>ab -n 500 -c 100 http://192.168.42.1:3000/category
+This is ApacheBench, Version 2.3 <$Revision: 1604373 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.42.1 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Finished 500 requests
+
+
+Server Software:
+Server Hostname:        192.168.42.1
+Server Port:            3000
+
+Document Path:          /category
+Document Length:        140 bytes
+
+Concurrency Level:      100
+Time taken for tests:   24.216 seconds
+Complete requests:      500
+Failed requests:        0
+Total transferred:      155000 bytes
+HTML transferred:       70000 bytes
+Requests per second:    20.65 [#/sec] (mean)
+Time per request:       4843.162 [ms] (mean)
+Time per request:       48.432 [ms] (mean, across all concurrent requests)
+Transfer rate:          6.25 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   48 377.0      0    3009
+Processing:    11 4556 1730.7   6033    6051
+Waiting:        9 2762 854.5   3027    3049
+Total:         11 4604 1719.1   6034    6051
+
+Percentage of the requests served within a certain time (ms)
+  50%   6034
+  66%   6040
+  75%   6042
+  80%   6042
+  90%   6050
+  95%   6050
+  98%   6051
+  99%   6051
+ 100%   6051 (longest request)
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ testing srkarra to ryan with switch
+ ===================
+ C:\xampp\apache\bin>ab -n 500 -c 100 http://192.168.42.1:3000/category
+This is ApacheBench, Version 2.3 <$Revision: 1604373 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.42.1 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Finished 500 requests
+
+
+Server Software:
+Server Hostname:        192.168.42.1
+Server Port:            3000
+
+Document Path:          /category
+Document Length:        140 bytes
+
+Concurrency Level:      100
+Time taken for tests:   24.227 seconds
+Complete requests:      500
+Failed requests:        0
+Total transferred:      155000 bytes
+HTML transferred:       70000 bytes
+Requests per second:    20.64 [#/sec] (mean)
+Time per request:       4845.444 [ms] (mean)
+Time per request:       48.454 [ms] (mean, across all concurrent requests)
+Transfer rate:          6.25 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   48 377.8      0    3016
+Processing:     0 4557 1741.6   6029    6064
+Waiting:        0 2704 937.3   3031    3048
+Total:          0 4606 1730.1   6032    6064
+
+Percentage of the requests served within a certain time (ms)
+  50%   6032
+  66%   6045
+  75%   6048
+  80%   6048
+  90%   6049
+  95%   6054
+  98%   6064
+  99%   6064
+ 100%   6064 (longest request)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ testing srkarra to srkarra, database is on atlantis.srkarra.com
+======================================
+C:\xampp\apache\bin>ab -n 500 -c 100 http://192.168.42.2:3000/category/
+This is ApacheBench, Version 2.3 <$Revision: 1604373 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.42.2 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Finished 500 requests
+
+
+Server Software:
+Server Hostname:        192.168.42.2
+Server Port:            3000
+
+Document Path:          /category/
+Document Length:        685 bytes
+
+Concurrency Level:      100
+Time taken for tests:   11.339 seconds
+Complete requests:      500
+Failed requests:        0
+Total transferred:      428000 bytes
+HTML transferred:       342500 bytes
+Requests per second:    44.10 [#/sec] (mean)
+Time per request:       2267.767 [ms] (mean)
+Time per request:       22.678 [ms] (mean, across all concurrent requests)
+Transfer rate:          36.86 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   1.6      0      16
+Processing:    63 2041 517.3   2250    2282
+Waiting:       63 2041 517.3   2250    2282
+Total:         63 2041 517.3   2250    2282
+
+Percentage of the requests served within a certain time (ms)
+  50%   2250
+  66%   2259
+  75%   2265
+  80%   2266
+  90%   2266
+  95%   2281
+  98%   2282
+  99%   2282
+ 100%   2282 (longest request)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ testing srkarra to prasad
+ =====================================
+ C:\xampp\apache\bin>ab -n 500 -c 100 http://192.168.42.4:3000/category/
+This is ApacheBench, Version 2.3 <$Revision: 1604373 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.42.4 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Finished 500 requests
+
+
+Server Software:
+Server Hostname:        192.168.42.4
+Server Port:            3000
+
+Document Path:          /category/
+Document Length:        64 bytes
+
+Concurrency Level:      100
+Time taken for tests:   2.391 seconds
+Complete requests:      500
+Failed requests:        0
+Total transferred:      117000 bytes
+HTML transferred:       32000 bytes
+Requests per second:    209.12 [#/sec] (mean)
+Time per request:       478.198 [ms] (mean)
+Time per request:       4.782 [ms] (mean, across all concurrent requests)
+Transfer rate:          47.79 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   4.4      0      16
+Processing:    63  454 210.7    562     734
+Waiting:       63  453 210.7    562     734
+Total:         63  455 211.2    562     734
+
+Percentage of the requests served within a certain time (ms)
+  50%    562
+  66%    594
+  75%    641
+  80%    641
+  90%    672
+  95%    703
+  98%    719
+  99%    719
+ 100%    734 (longest request)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

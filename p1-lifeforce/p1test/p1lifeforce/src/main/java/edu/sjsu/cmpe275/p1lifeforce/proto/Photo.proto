@@ -1,0 +1,38 @@
+package edu.sjsu.cmpe275.p1lifeforce.proto;
+option java_package = "edu.sjsu.cmpe275.p1lifeforce.proto";
+option java_outer_classname = "Photo";
+
+message PhotoResponse {
+    enum ResponseFlag {
+        success = 0;
+        failure = 1;
+    }
+    
+    enum ResponseType {
+        read = 0;
+        write = 1;
+        delete = 2;
+    }
+    
+    required ResponseFlag responseFlag = 1 [default = success];
+    required ResponseType responseType = 2 [default = read];
+    optional int64 lastModified = 3;                     // Unix timestamp
+    optional string uuid = 4;                            // Required for all types, optional for simplicity/flexibility
+    optional bytes photo = 5;                            // Required for Type 0
+}
+
+message PhotoRequest {
+    enum RequestType {
+        read = 0;
+        write = 1;
+        delete = 2;
+    }
+    
+    required RequestType requestType = 1 [default = read];
+    optional string uuid = 2;                            // Required for types 0 & 2
+    optional string name = 3;                            // Required for type 1
+    optional bytes data = 4;                             // Required for type 1
+    
+    optional int32 contentLength = 5;                    // Optional: Used for Integrity check, if protobuf does not fill this in automatically, then it should be discarded
+
+}

@@ -1,0 +1,56 @@
+/* How to generate
+ * ===============
+ * $ cd dns
+ * $ /usr/local/Cellar/protobuf241/2.4.1/bin/protoc src/dns/DNSProtocol.proto --java_out=src/
+ */
+ 
+package dns;
+
+option optimize_for = SPEED;
+
+/* This message describes a cluster's master node.
+ * @field clusterName The master node's cluster.
+ * @field masterIp The master node's ip.
+ * @field masterPort The master node's port.
+ */
+message MasterNode {
+  required string clusterName = 1;
+  required string masterIp = 2;
+  required uint32 masterPort = 3;
+}
+
+/* Request by the client to DNS server.
+ * @param action GET to get info; PUT to post/put info.
+ * @param clusterName Applies only to GET. If set, retrieves the cluster's master
+     node info; else retrieves info on all master nodes.
+ * @param masterNode Applies only to PUT. Master node info to put into DNS.
+ */
+message DNSRequest {
+
+  enum Action {
+    GET = 0;
+    PUT = 1;
+  }
+  
+  required Action action = 1;
+  optional string clusterName = 2;
+  optional MasterNode masterNode = 3;
+}
+
+/* The response from the DNS server.
+ * @field status OK if request was fulfilled properly; ERROR if any encountered.
+ * @field errorMessage If there is any error, this field contains the error message.
+ * @field masterNode For GET, the master nodes requested. For PUT, the master node that
+ *   was put into DNS.
+ */
+message DNSResponse {
+
+  enum Status {
+    OK = 0;
+    ERROR = 1;
+  }
+   
+  required Status status = 1;
+  optional string errorMessage = 2;
+  repeated MasterNode masterNode = 3;
+}

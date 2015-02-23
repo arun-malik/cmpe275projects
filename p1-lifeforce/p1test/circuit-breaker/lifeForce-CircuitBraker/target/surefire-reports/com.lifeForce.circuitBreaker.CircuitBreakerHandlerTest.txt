@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.lifeForce.circuitBreaker.CircuitBreakerHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 20.073 sec <<< FAILURE!
+testBreakerResetsAfterTimeoutPassedWithSuccessfulCommand(com.lifeForce.circuitBreaker.CircuitBreakerHandlerTest)  Time elapsed: 10.005 sec  <<< ERROR!
+com.lifeForce.circuitBreaker.util.CircuitBreakerOpenException: CircuitBreaker Open Exception - CircuitBreaker is in open state and requests are failing
+	at com.lifeForce.circuitBreaker.OpenState.preInvoke(OpenState.java:27)
+	at com.lifeForce.circuitBreaker.CircuitBreakerHandler.doOperation(CircuitBreakerHandler.java:19)
+	at com.lifeForce.circuitBreaker.CircuitBreakerHandlerTest.testBreakerResetsAfterTimeoutPassedWithSuccessfulCommand(CircuitBreakerHandlerTest.java:69)
+

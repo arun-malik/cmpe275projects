@@ -1,0 +1,14 @@
+###READ ME####
+
+Folder information:
+
+  1. core-netty-4.2 -> source code implementation.
+      1.1  You can find SQL Script in project->resources->DbScript.sql
+
+          Code is implemented for Inter-Cluster communication too (As decided by all teams).
+          1. Cluster Mapper -> Table is shared among all clusters --> replicated using MySQl replication
+          2. Mapper -> table is shared among nodes in our cluster --> leader to identify / find resource available on which node. --> shared among all nodes in cluster --> replicated using mySql
+          3. BloblStorage -> local Storage table
+
+  2. circuit breaker -> earlier my team was planning to implement code from scratch. So implemented Circuit breaker.
+  3. netty DNS -> were planning to implement reverese proxy for our cluster, so that client will have abstract information.
